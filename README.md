@@ -6,6 +6,8 @@ Website for collage technical event
   - Back-end: PHP
   - Database: MySQL
   - Encryption: CryptoJS & Open SSL Libraries
+ 
+ Created fully dynamic website for 36 hours online event of college.
 
 ### Screenshots given here:
 
