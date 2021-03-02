@@ -1,0 +1,38 @@
+/*--Banner Contact*/
+.b-contact
+{
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &.overlay
+    {
+        position: relative;
+        &:before
+        {
+            position: absolute;
+            content: "";
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    .row
+    {
+        min-height: 400px;
+        height: calc(20vh);
+
+        h1
+        {
+            z-index: 1;
+            font-weight: 1000;
+        }
+        button
+        {
+            transition: all .5s;
+        }
+    }
+}

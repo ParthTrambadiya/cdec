@@ -1,0 +1,61 @@
+/*--Profile Modal--*/
+.profileModal
+{
+    .modal-content
+    {
+        .row
+        {
+            .upload-profile-img
+            {
+                position: relative;
+                width: 10%;
+                margin-left: auto;
+                margin-right: auto;
+                transition: filter .8s ease;
+
+                &:hover
+                {
+                    filter: drop-shadow(1px 1px 22px #7584bb);
+
+                    .camera-icon
+                    {
+                        filter: invert(100%) !important;
+                    }
+                }
+
+                #upload-profile
+                {
+                    position: absolute;
+                    top: 0;
+                    z-index: 10;
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 50%;
+                    margin-top: 0px;
+                    opacity: 0;
+
+                    &::-webkit-file-upload-button
+                    {
+                        visibility: hidden;
+                    }
+                }
+
+                .camera-icon
+                {
+                    position: absolute;
+                    top: 70px;
+                    width: 60px !important;
+                    filter: invert(30%) !important;
+                }
+            }
+        }
+
+        .btns
+        {
+            button[type='submit']
+            {
+                display: none;
+            }
+        }
+    }
+}

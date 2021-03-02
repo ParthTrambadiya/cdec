@@ -1,0 +1,29 @@
+/*--Leaderboard--*/
+.leaderboard
+{
+    background: linear-gradient(135deg, #25aae1, #4481eb, #04befe, #3f86ed);
+    
+    .wm-leaderboard
+    {
+        position: absolute;
+        z-index: 1;
+        white-space: nowrap;
+        opacity: 0.3;
+        left: 50%;
+        color: #fff;
+        transform: translateX(-50%) translateY(-130%);
+    }
+
+    .card
+    {
+        box-shadow: .1px 1px 10px 0 rgba(255, 255, 255, 1);
+
+        input,select {
+            transition: all 0.5s;
+
+            &:focus {
+                box-shadow: 0px 0px 10px rgba(0, 125, 255, 0.5);
+            }
+        }
+    }
+}

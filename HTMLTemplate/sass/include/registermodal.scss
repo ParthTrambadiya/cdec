@@ -1,0 +1,22 @@
+/*--Register Form--*/
+.registerModal
+{
+    .modal-content
+    {
+        .row
+        {
+            form
+            {
+                input, select
+                {
+                    transition: all 0.5s;
+
+                    &:focus
+                    {
+                        box-shadow: 0px 0px 10px rgba(0, 125, 255, 0.5);
+                    }
+                }
+            }
+        }
+    }
+}

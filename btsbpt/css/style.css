@@ -1,0 +1,29 @@
+.card .card-header, .card-footer
+{
+    background-color: #34b7f1;
+}
+.card input:focus
+{
+    box-shadow: none;
+    border: 1px solid #34b7f1;
+}
+
+.validInp {
+    color: black;
+    border-color: rgb(132, 255, 75);
+}
+  
+.invalidInp {
+color: red;
+border-color: red;
+}
+
+.validInp:focus {
+color: black;
+border-color: rgb(132, 255, 75);
+}
+
+.invalidInp:focus {
+color: red;
+border-color: red;
+}

@@ -1,0 +1,188 @@
+/*--about Us--*/
+.aboutus
+{
+    background: linear-gradient(135deg, #25aae1, #4481eb, #04befe, #3f86ed);
+    
+    .wm-aboutus
+    {
+        position: absolute;
+        z-index: 1;
+        white-space: nowrap;
+        opacity: 0.3;
+        left: 50%;
+        color: #fff;
+        transform: translateX(-50%) translateY(-120%);
+    }
+
+    .light
+    {
+        margin-bottom: 10px;
+        &::after
+        {
+            content: "";
+            position: absolute;
+            background-image: url('./assets/whitelight.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 100%;
+            height: 50px;
+            z-index: 0;
+            left: -1px;
+            margin: 0;
+            bottom: -1px;
+            opacity: 0.8;
+        }
+    }
+
+    .prolight
+    {
+        &::after
+        {
+            content: "";
+            position: absolute;
+            background-image: url('./assets/whitelight.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 100%;
+            height: 50px;
+            z-index: 0;
+            left: -1px;
+            bottom: -1px;
+        }
+    }
+    .our-team 
+    {
+        padding: 30px 0 40px;
+        max-width: 270px;
+        margin-bottom: 30px;
+        background-color: #fff;
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+        transition: transform .5s, box-shadow .5s;
+
+        .picture
+        {
+            display: inline-block;
+            height: 120px;
+            width: 120px;
+            margin-bottom: 50px;
+            z-index: 1;
+            position: relative;
+
+            &::before
+            {
+                content: "";
+                width: 100%;
+                height: 0;
+                border-radius: 50%;
+                background-color: #1369ce;
+                position: absolute;
+                bottom: 135%;
+                right: 0;
+                left: 0;
+                opacity: 0.9;
+                transform: scale(3);
+                transition: all 0.3s linear 0s;
+            }
+
+            &::after
+            {
+                content: "";
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background-color: #1369ce;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+
+            img
+            {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                transform: scale(1);
+                transition: all 0.9s ease 0s;
+            }
+        }
+
+        .title
+        {
+            display: block;
+            font-size: 15px;
+            color: #4e5052;
+            text-transform: capitalize;
+        }
+
+        .social
+        {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            background-color: #1369ce;
+            position: absolute;
+            bottom: -100px;
+            left: 0;
+            transition: all 0.5s ease 0s;
+
+            li
+            {
+                display: inline-block;
+
+                a
+                {
+                    display: block;
+                    padding: 10px;
+                    font-size: 17px;
+                    color: white;
+                    transition: all 0.3s ease 0s;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        &:hover
+        {
+            transform: translateY(-10px);
+            box-shadow: 0 7px 10px rgba(0, 0, 0, 0.50);
+            border: none;
+            border-radius: 0.5rem;
+            
+            .picture
+            {
+                &::before
+                {
+                    height: 100%;
+                }
+
+                img
+                {
+                    box-shadow: 0 0 0 14px #f7f5ec;
+                    transform: scale(0.7);
+                }
+            }
+
+            .social
+            {
+                bottom: 0;
+
+                li
+                {
+                    a
+                    {
+                        &:hover
+                        {
+                            color: #1369ce;
+                            background-color: #f7f5ec;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

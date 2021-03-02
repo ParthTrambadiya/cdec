@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CDEC</title>
+        <link rel="icon" href="./assets/logo.png">
+
+        <!--Bootstrap CSS CDN-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+        <!--ANimate.css-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+
+        <!--Custom CSS-->
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <!--Main-Site-->
+        <main id="main-part">
+            <div class="container-fluid error404">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-md-7 m-auto text-center text-white">
+                        <h2 class="font-roboto">Oops! Page not found.</h2>
+                        <h1 class="font-roboto main-404 animate__animated animate__wobble">404</h1>
+                        <h1 class="font-roboto wm-404">404</h1>
+                        <p class="font-roboto">We can't find the page you're looking for.</p>
+                        <a href="index"><button class="btn btn-hover bg-white go-to-home font-baloo">Go to Home</button></a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!--!Main-Site-->
+
+        <!--JS-->
+        <script src="./jquery-3.3.1.min.js"></script>
+        <script src="./jquery-migrate-3.0.1.min.js"></script>
+
+        <!--Bootstrap JS CDN-->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    </body>
+</html>

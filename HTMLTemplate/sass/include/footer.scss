@@ -1,0 +1,23 @@
+/*--Footer--*/
+.ft
+{
+    background: #fff;
+
+    a
+    {
+        color: $color-blue;
+        &:hover
+        {
+            color: $color-blue;
+        }
+    }
+
+    .copyright
+    {
+        img
+        {
+            max-width: 30px;
+            max-height: 30px;
+        }
+    }
+}

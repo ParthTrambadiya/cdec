@@ -1,0 +1,57 @@
+/*--Fonts Embed--*/
+/*--Poppins--*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/*--Roboto--*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+/*--AUdiowide--*/
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+/*--Baloo Thumbi 2--*/
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap');
+
+*
+{
+    a
+    {
+        text-decoration: none;
+        outline: none;
+    }
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+select
+{
+    option
+    {
+        font-family: 'Poppins';
+    }
+}
+
+
+/*--Import Files--*/
+@import './include/variable.scss';
+@import './include/font.scss';
+@import './include/color.scss';
+@import './include/preloader.scss';
+@import './include/navbar.scss';
+@import './include/landing-page.scss';
+@import './include/login.scss';
+@import './include/registerbtn.scss';
+@import './include/aboutevent.scss';
+@import './include/banner-contact.scss';
+@import './include/department.scss';
+@import './include/footer.scss';
+@import './include/404.scss';
+@import './include/registermodal.scss';
+@import './include/profileimg.scss';
+@import './include/contactus.scss';
+@import './include/leaderboard.scss';
+@import './include/aboutus.scss';
+@import './include/result.scss';
+@import './include/session.scss';
+@import './include/sweetalert.scss';
+@import './include/otp.scss';
+@import './include/mediaquery.scss';

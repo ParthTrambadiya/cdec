@@ -1,0 +1,68 @@
+.session
+{
+    .sessionPart
+    {
+        background-color: #fff;
+    
+        .top-nav
+        {
+            background-color: #007bff;
+            color: #fff;
+            box-shadow: .1px 1px 4px 0 #e7eeef;
+            .profile-dropdown
+            {
+                box-shadow: .1px 1px 10px 0 rgba(0, 125, 255, 0.5);
+            }
+        }
+
+        .questiontext
+        {
+            .question
+            {
+                user-select: none; /* supported by Chrome and Opera */
+                -webkit-user-select: none; /* Safari */
+                -khtml-user-select: none; /* Konqueror HTML */
+                -moz-user-select: none; /* Firefox */
+                -ms-user-select: none; /* Internet Explorer/Edge */
+                cursor: not-allowed;
+            }
+            .card
+            {
+                box-shadow: 3px 3px 20px 5px rgba(0, 123, 255, 0.2);
+            }
+        }
+        .anspart
+            {
+                form
+                {
+                    input[type="text"]
+                    {
+                        transition: box-shadow .5s;
+                        &:focus
+                        {
+                            box-shadow: .1px 1px 10px 0 rgba(0, 125, 255, 0.5);
+                        }
+                    }
+                }
+            }
+        .cdectitle
+        {
+            white-space: nowrap;
+            writing-mode: vertical-lr;
+            color: rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+#myLink 
+{
+    display: block;
+    padding: 5px 2px;
+    background :#007bff;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    line-height: 20px;
+    border-top-right-radius: 11px;
+    border-bottom-right-radius: 11px;
+    writing-mode: vertical-rl;
+}

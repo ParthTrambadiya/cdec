@@ -1,0 +1,20 @@
+{
+  "name": "jquery.socialfloating.js",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ixtlistudios/jquery.socialfloating.js.git"
+  },
+  "author": "Ixtli Studios",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ixtlistudios/jquery.socialfloating.js/issues"
+  },
+  "homepage": "https://github.com/ixtlistudios/jquery.socialfloating.js#readme",
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-contrib-jshint": "^2.1.0",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-watch": "^1.1.0"
+  }
+}

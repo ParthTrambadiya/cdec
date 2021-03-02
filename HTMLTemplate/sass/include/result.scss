@@ -1,0 +1,78 @@
+/*--Result--*/
+.result
+{
+    background: linear-gradient(135deg, #25aae1, #4481eb, #04befe, #3f86ed);
+
+    .wm-result
+    {
+        position: absolute;
+        z-index: 1;
+        white-space: nowrap;
+        opacity: 0.3;
+        left: 50%;
+        color: #fff;
+        transform: translateX(-50%) translateY(-120%);
+    }
+
+    .rank-card
+    {
+        text-align: center;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+        background-color: #fff;
+        padding: 20px;
+        box-sizing: border-box;
+        border: 5px solid $color-blue;
+        border-radius: 2rem;
+
+        .rank-img
+        {
+            position: absolute;
+            width: 100px;
+            right: -50px;
+            top: -50px;
+        }
+
+        .rank-card-img
+        {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 0 auto 20px auto;
+            display: block;
+        }
+        .rank-card-name
+        {
+            font-family: $font-roboto;
+            background: url('./assets/textbg.jpg') center center no-repeat;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+        }
+        .rank-card-institute, .rank-card-dept, .rank-card-sid
+        {
+            font-weight: $font-poppins;
+            font-weight: bold;
+        }
+    }
+
+    .rank-one
+    {
+        transform: scale(1.05);
+        transition: 0.5s ease;
+
+        &:hover
+        {
+            transform: scale(1.1);
+        }
+    }
+    .rank-two, .rank-three
+    {
+        transform: scale(0.9);
+        transition: 0.5s ease;
+
+        &:hover
+        {
+            transform: scale(1);
+        }
+    }
+}

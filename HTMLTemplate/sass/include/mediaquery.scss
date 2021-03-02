@@ -1,0 +1,37 @@
+/*--Media Qurey--*/
+@media only screen and (max-width:1200px)
+{
+    .swiper-button-prev, .swiper-button-next
+    {
+        display: none;
+    }
+    .btn-hover
+    {
+        width: 150px;
+    }
+}
+
+@media only screen and (max-width:1000px)
+{
+    .btn-hover
+    {
+        width: 150px;
+    }
+    nav
+    {
+        background: #fff;
+
+        a
+        {
+            color: #000000;
+        }
+    }
+}
+
+@media only screen and (max-width:770px)
+{
+    .learn-more, .arrow
+    {
+        display: none;
+    }
+}

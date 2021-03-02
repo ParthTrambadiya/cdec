@@ -1,0 +1,34 @@
+/*--About Event--*/
+.aboutevent
+{
+    background: #fff;
+
+    hr
+    {
+        width: 50%;
+        border: 1px solid $color-blue;
+    }
+
+    .wm-aboutcdec
+    {
+        position: absolute;
+        z-index: 1;
+        white-space: nowrap;
+        opacity: 0.06;
+        left: 50%;
+        color: black;
+        transform: translateX(-50%) translateY(-120%);
+    }
+    .cdecevent
+    {
+        cursor: pointer;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 40px rgba(0, 0, 0, 0.2);
+
+        &:hover
+        {
+            box-shadow: 0 50px 80px rgba($color: #000000, $alpha: 0.2);
+        }
+    }
+}

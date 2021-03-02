@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDec</title>
+    <link rel="icon" href="./assets/logo.png">
+
+    <!--Bootstrap CSS CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!--Font Awesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+    <!--Jquery Countdown CSS-->
+    <link rel="stylesheet" href="./plugins/responsive-flip-countdown/style.css">
+
+    <!--Swiper Carousel-->
+    <link rel="stylesheet" href="./plugins/swiper/swiper.min.css">
+
+    <!--AOS-->
+    <link  rel="stylesheet" href="./plugins/aos/aos.css">
+
+    <!--Datatable CSS-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+
+    <!--Bottom to Top-->
+    <link rel="stylesheet" href="./plugins/Scroll-To-Top-Button/dist/jquery-backToTop.min.css">
+
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!--Navbar-->
+    <header id="header" class="hd">
+        <nav class="navbar navbar-expand-lg fixed-top bg-white">
+            <!--Preloader-->
+            <div class="preloader">
+                <div class="boxes">
+                    <div class="box">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="box">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="box">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="box">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <!--!Preloader-->
+            <a class="navbar-brand font-baloo color-black" href="#">
+                <img src="./assets/logo.png" width="40" height="40" class="d-inline-block align-top" alt="" loading="lazy">
+                <span class="font-audiowide font-size-27">CDEC</span>
+            </a>
+            <button class="navbar-toggler color-blue-bg" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto py-2">
+                    <li class="nav-item">
+                        <a class="nav-link menu font-baloo font-weight-bold color-black px-3" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link menu font-baloo color-black font-weight-bold px-3" href="#">Leaderboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link menu font-baloo color-black font-weight-bold px-3" href="#">Result</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link menu font-baloo color-black font-weight-bold px-3" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link menu font-baloo color-black font-weight-bold px-3" href="#">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link menu font-baloo color-black font-weight-bold px-3" href="" data-toggle="modal" data-target=".loginModal">Login</a>
+                    </li>
+                </ul>
+                <button class="btn btn-hover color font-baloo" data-toggle="modal" data-target=".registerModal">Register Now</button>
+            </div>
+        </nav>
+
+        <!--Login Modal-->
+        <div class="modal fade loginModal m-auto" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content rounded-0">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="text-right">
+                                <span class="btn" data-dismiss="modal">
+                                    <i class="fas fa-times-circle"></i>
+                                </span>
+                            </div>
+                            <h1 class="font-roboto text-center py-4">Login</h1>
+                            <div class="login shadow-none px-5 py-3">
+                                <form action="#" method="post" class="font-baloo">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control email shadow-none" id="email" required>
+                                        <label for="email">Email</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control password shadow-none" id="password" required>
+                                        <label for="password">Password</label>
+                                        <span id="eye" style="position: absolute; right: 10px; top: 10px;">
+                                            <i class="fa fa-eye"></i>
+                                        </span>
+                                        <a href="#"><small>Forgot Password?</small></a>
+                                    </div>
+                                    <button type="submit" class="btn btn-hover color d-block mx-auto">Login</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--!Login Modal-->
+
+        <!--Register Modal-->
+        <div class="modal fade registerModal m-auto" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content rounded-0">
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-7 color-blue-bg py-0 py-lg-5">
+                            <img src="./assets/signipanimation.gif" class="img-fluid d-block mx-auto my-0 py-0 my-lg-5 py-lg-5" id="registergif">
+                        </div>
+                        <div class="col-sm-12 col-lg-5 py-4">
+                            <div class="pb-3 text-right">
+                                <span class="btn" data-dismiss="modal">
+                                    <i class="fas fa-times-circle"></i>
+                                </span>
+                                <h1 class="font-roboto text-center">Registration</h1>
+                                <h6 class="font-roboto text-center">Be ready for knowledge fight</h6>
+                            </div>
+                            <form action="#" method="post" class="px-4">
+                                <div class="row form-group font-baloo mb-3">
+                                    <div class="col-md-6">
+                                        <label class="color-second" for="fname">First Name</label>
+                                        <input type="text" id="fname" class="form-control rounded">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="color-second" for="lname">Last Name</label>
+                                        <input type="text" id="lname" class="form-control rounded">
+                                    </div>
+                                </div>
+
+                                <div class="row form-group font-baloo mb-3">
+                                    <div class="col-md-12">
+                                        <label class="color-second" for="gender">Gender</label><br>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" value="male" id="male" name="gender" class="custom-control-input">
+                                            <label class="custom-control-label" for="male">Male</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" value="female" id="female" name="gender" class="custom-control-input">
+                                            <label class="custom-control-label" for="female">Female</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row form-group font-baloo mb-3">
+                                    <div class="col-md-12">
+                                        <label class="font-baloo">Institute</label>
+                                        <select name="select1" id="select1" role="listbox" class="form-control rounded custom-select">
+                                            <option selected="" value="0">Select your Institute</option>
+                                            <option value="cspit">CSPIT</option>
+                                            <option value="depstar">DEPSTAR</option>
+                                            <option value="cmpica">CMPICA</option>
+                                            <option value="rpcp">RPCP</option>
+                                            <option value="iiim">IIIM</option>
+                                            <option value="pdpias">PDPIAS</option>
+                                            <option value="arip">ARIP</option>
+                                            <option value="mtin">MTIN</option>
+                                            <option value="cips">CIPS</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="row form-group font-baloo mb-3">
+                                    <div class="col-md-12">
+                                        <label class="font-baloo">Department</label>
+                                        <select name="select2" id="select2" role="listbox" class="form-control rounded custom-select">
+                                            <option value="0" selected="">First select your institute</option>
+                                            <option value="cspit">Select your department</option>
+                                            <option value="cspit">BTECH(CE)</option>
+                                            <option value="cspit">BTECH(CL)</option>
+                                            <option value="cspit">BTECH(CSE)</option>
+                                            <option value="cspit">BTECH(EC)</option>
+                                            <option value="cspit">BTECH(EE)</option>
+                                            <option value="cspit">BTECH(IT)</option>
+                                            <option value="cspit">BTECH(ME)</option>
+                                            <option value="cspit">DRCE</option>
+                                            <option value="cspit">DRCL</option>
+                                            <option value="cspit">DREC</option>
+                                            <option value="cspit">DREE</option>
+                                            <option value="cspit">DRME</option>
+                                            <option value="cspit">MTECH(AMT)</option>
+                                            <option value="cspit">MTECH(CE)</option>
+                                            <option value="cspit">MTECH(CL)</option>
+                                            <option value="cspit">MTECH(CSE)</option>
+                                            <option value="cspit">MTECH(EC)</option>
+                                            <option value="cspit">MTECH(EE)</option>
+                                            <option value="cspit">MTECH(EVD)</option>
+                                            <option value="cspit">MTECH(ICT)</option>
+                                            <option value="cspit">MTECH(IT)</option>
+                                            <option value="cspit">MTECH(ME)</option>
+                                            <option value="cspit">MTECH(PE)</option>
+                                            <option value="cspit">MTECH(TE)</option>
+                                            <option value="cspit">MTM</option>
+                                            <option value="depstar">Select your department</option>
+                                            <option value="depstar">BTECH(CE)</option>
+                                            <option value="depstar">BTECH(CS)</option>
+                                            <option value="depstar">BTECH(IT)</option>
+                                            <option value="depstar">DRCE</option>
+                                            <option value="cmpica">Select your department</option>
+                                            <option value="cmpica">B.Sc.(IT)</option>
+                                            <option value="cmpica">BCA</option>
+                                            <option value="cmpica">DRMCA</option>
+                                            <option value="cmpica">M.Sc(IT)</option>
+                                            <option value="cmpica">MCA</option>
+                                            <option value="cmpica">MCAL</option>
+                                            <option value="cmpica">PGDCA</option>
+                                            <option value="rpcp">Select your department</option>
+                                            <option value="rpcp">B.Pharm<option>
+                                            <option value="rpcp">CPCT<option>
+                                            <option value="rpcp">CPPAT<option>
+                                            <option value="rpcp">CPPV<option>
+                                            <option value="rpcp">DRPC<option>
+                                            <option value="rpcp">DRPHC<option>
+                                            <option value="rpcp">DRPHCOG<option>
+                                            <option value="rpcp">DRPHCOL<option>
+                                            <option value="rpcp">DRPHT<option>
+                                            <option value="rpcp">M.PHARM(CT)<option>
+                                            <option value="rpcp">M.PHARM(DRA)<option>
+                                            <option value="rpcp">M.PHARM(CP)<option>
+                                            <option value="rpcp">M.PHARM(PT)<option>
+                                            <option value="rpcp">M.PHARM(QA)<option>
+                                            <option value="rpcp">MPHPCL<option>
+                                            <option value="rpcp">MPHPPP<option>
+                                            <option value="rpcp">MPHPQA<option>
+                                            <option value="rpcp">MPHPRGA<option>
+                                            <option value="rpcp">MPHTCH<option>
+                                            <option value="rpcp">MPM<option>
+                                            <option value="rpcp">PGDCT<option>
+                                            <option value="rpcp">PGDPT<option>
+                                            <option value="iiim">Select your department</option>
+                                            <option value="iiim">BBA<option>
+                                            <option value="iiim">DRLSC<option>
+                                            <option value="iiim">DRMBA<option>
+                                            <option value="iiim">MBA-CH<option>
+                                            <option value="iiim">PGDM<option>
+                                            <option value="pdpias">Select your department</option>
+                                            <option value="pdpias">B.Sc<option>
+                                            <option value="pdpias">BSCPHY<option>
+                                            <option value="pdpias">DRBC<option>
+                                            <option value="pdpias">DRBIO<option>
+                                            <option value="pdpias">DRCHEM<option>
+                                            <option value="pdpias">DRCSMCRI<option>
+                                            <option value="pdpias">DRMTH<option>
+                                            <option value="pdpias">DRNST<option>
+                                            <option value="pdpias">M Phill<option>
+                                            <option value="pdpias">M.Sc.(AOC)<option>
+                                            <option value="pdpias">M.Sc.(BC)<option>
+                                            <option value="pdpias">M.Sc.(BT)<option>
+                                            <option value="pdpias">M.Sc.(MI)<option>
+                                            <option value="pdpias">M.Sc.(MTH)<option>
+                                            <option value="pdpias">M.Sc.(NST)<option>
+                                            <option value="pdpias">M.Sc.(PHY)<option>
+                                            <option value="arip">Select your department</option>
+                                            <option value="arip">BPT<option>
+                                            <option value="arip">CCAPT<option>
+                                            <option value="arip">DRPT<option>
+                                            <option value="arip">MPT(CS)<option>
+                                            <option value="arip">MPT(MS)<option>
+                                            <option value="arip">MPT(NS)<option>
+                                            <option value="arip">MPT(PA)<option>
+                                            <option value="arip">MPT(RE)<option>
+                                            <option value="arip">MPT(SS)<option>
+                                            <option value="arip">MPT(WH)<option>
+                                            <option value="mtin">Select your department</option>
+                                            <option value="mtin">BSC.Nursing<option>
+                                            <option value="mtin">DNR<option>
+                                            <option value="mtin">GNM<option>
+                                            <option value="mtin">MNCH<option>
+                                            <option value="mtin">MNMH<option>
+                                            <option value="mtin">MNMS<option>
+                                            <option value="mtin">MNOG<option>
+                                            <option value="mtin">MNPN<option>
+                                            <option value="cips">Select your department</option>
+                                            <option value="cips">BMIT<option>
+                                            <option value="cips">BOP<option>
+                                            <option value="cips">BOTAT<option>
+                                            <option value="cips">BSMT<option>
+                                            <option value="cips">DRMLT<option>
+                                            <option value="cips">DROTAT<option>
+                                            <option value="cips">M.Sc. MIT<option>
+                                            <option value="cips">MSMLT<option>
+                                            <option value="cips">PGDCH<option>
+                                            <option value="cips">PGDHAT<option>
+                                            <option value="cips">PGDMLT<option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="row form-group font-baloo mb-3">
+                                    <div class="col-md-12">
+                                        <label class="color-second" for="text">Student ID</label> 
+                                        <input type="text" id="text" class="form-control rounded">
+                                    </div>
+                                </div>
+    
+                                <div class="row form-group font-baloo mb-0">
+                                    <div class="col-md-12">
+                                        <label class="color-second" for="email">Email</label> 
+                                        <input type="email" id="email" class="form-control rounded">
+                                        <div class="text-right m-0 p-0">
+                                            <a href="#" class="text-decoration-none" style="right: 0; font-size: 12px;">Verify Email</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row form-group font-baloo mb-3">
+                                    <div class="col-md-12">
+                                        <label class="color-second" for="contactno">Contact No.</label> 
+                                        <input type="tel" id="contactno" class="form-control rounded">
+                                    </div>
+                                </div>
+    
+                                <div class="row form-group font-baloo">
+                                    <div class="col-md-12">
+                                        <label class="color-second" for="password">Password</label> 
+                                        <input type="password" id="password" class="form-control rounded">
+                                        <span id="eye" style="position: absolute; right: 25px; bottom: 6px;">
+                                            <i class="fa fa-eye"></i>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="row form-group font-baloo mb-0">
+                                    <div class="col-md-6 text-center">
+                                        <button class="btn btn-hover color d-block mx-auto my-1 my-lg-0" type="reset">Reset</button>
+                                    </div>
+                                    <div class="col-md-6 text-center">
+                                        <button class="btn btn-hover color d-block mx-auto my-1 my-lg-0" type="submit" disabled style="cursor: not-allowed;">Register</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade profileModal m-auto" id="ProfileMd" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content rounded-0">
+                    <div class="row p-3">
+                        <div class="col-12 text-center font-roboto">
+                            <h1>Profile Image</h1>
+                        </div>
+                        <div class="col-12">
+                            <div class="upload-profile-img d-flex justify-content-center">
+                                <div class="text-center">
+                                    <div class="d-flex justify-content-center">
+                                        <img src="./assets/camera-solid.svg" class="camera-icon">
+                                    </div>
+                                    <img src="./assets/beard.png" class="img rounded-circle" style="width: 200px; height: 200px">
+                                    <small class="font-baloo text-black">Choose Image</small>
+                                    <form method="post" action="#" id="profile-form">
+                                        <input type="file" class="form-control-file" name="profile-upload" id="upload-profile">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btns m-auto py-3">
+                            <button class="btn btn-hover color" data-dismiss="modal">Skip</button>
+                            <button class="btn btn-hover color" form="profile-form" type="submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--!Register Modal-->
+    </header>
+    <!--!Navbar-->
+    <!--Main-Site-->
+    <main id="main-part" class="leaderboard">
+        <div class="container">
+            <div class="row pt-5 mt-3">
+                <div class="col-12 text-center">
+                    <h1 class="font-roboto font-weight-bold text-white font-size-40 mt-5 text-uppercase">Leaderboard</h1>
+                    <h1 class="font-roboto font-weight-bold text-white font-size-50 wm-leaderboard text-uppercase">Leaderboard</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card my-3 border-0" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="card-header text-center">
+                            <div class="w-75 m-auto">
+                                <div class="row form-group font-baloo mb-3">
+                                    <div class="col-md-6">
+                                        <label class="font-baloo">Institute</label>
+                                        <select name="inst" id="inst" role="listbox" class="form-control rounded custom-select">
+                                            <option value="all">All</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="font-baloo">Department</label>
+                                        <select name="dept" id="dept" role="listbox" class="form-control rounded custom-select">
+                                            <option value="all">First Select Institute</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <table id="leaderboardtb" class="table table-hover table-bordered text-center font-baloo table-responsive table-striped table-light">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th style="width: 100px;">Status</th>
+                                        <th style="width: 100px;">Rank</th>
+                                        <th style="width: 100px;">Level</th>
+                                        <th style="width: 100px;">Time</th>
+                                        <th style="width: 320px;">Name</th>
+                                        <th style="width: 120px;">StudentID</th>
+                                        <th style="width: 120px;">Institute</th>
+                                        <th style="width: 120px;">Department</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 100px;"></td>
+                                        <td style="width: 100px;">1</td>
+                                        <td style="width: 100px;">10</td>
+                                        <td style="width: 100px;">01:02:08</td>
+                                        <td style="width: 320px;">Prit Trambadiya</td>
+                                        <td style="width: 120px;">18ce130</td>
+                                        <td style="width: 120px;">CSPIT</td>
+                                        <td style="width: 120px;">CE</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100px;"></td>
+                                        <td style="width: 100px;">1</td>
+                                        <td style="width: 100px;">10</td>
+                                        <td style="width: 100px;">01:02:08</td>
+                                        <td style="width: 320px;">Parth Trambadiya</td>
+                                        <td style="width: 120px;">18ce130</td>
+                                        <td style="width: 120px;">CSPIT</td>
+                                        <td style="width: 120px;">IT</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100px;"></td>
+                                        <td style="width: 100px;">1</td>
+                                        <td style="width: 100px;">10</td>
+                                        <td style="width: 100px;">01:02:08</td>
+                                        <td style="width: 320px;">Parth Trambadiya</td>
+                                        <td style="width: 120px;">18ce132</td>
+                                        <td style="width: 120px;">CSPIT</td>
+                                        <td style="width: 120px;">IT</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100px;"></td>
+                                        <td style="width: 100px;">1</td>
+                                        <td style="width: 100px;">10</td>
+                                        <td style="width: 100px;">01:02:08</td>
+                                        <td style="width: 320px;">Parth Trambadiya</td>
+                                        <td style="width: 120px;">18ce130</td>
+                                        <td style="width: 120px;">CSPIT</td>
+                                        <td style="width: 120px;">IT</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100px;"></td>
+                                        <td style="width: 100px;">1</td>
+                                        <td style="width: 100px;">10</td>
+                                        <td style="width: 100px;">01:02:08</td>
+                                        <td style="width: 320px;">Parth Trambadiya</td>
+                                        <td style="width: 120px;">18ce130</td>
+                                        <td style="width: 120px;">CSPIT</td>
+                                        <td style="width: 120px;">IT</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--!Main-Site-->
+    <!--Footer-->
+    <footer id="footer"class="ft">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-4 text-center py-4">
+                    <h3 class="font-roboto">Follow Us</h3>
+                    <div class="mt-4 font-baloo color-blue">
+                        <span class="px-3"><a href="#" class="text-decoration-none"><i class="fab fa-instagram fa-2x"></i></a></span>
+                        <span class="px-3"><a href="#" class="text-decoration-none"><i class="fab fa-facebook-f fa-2x"></i></a></span>
+                        <span class="px-3"><a href="#" class="text-decoration-none"><i class="fab fa-twitter fa-2x"></i></a></span>
+                        <span class="px-3"><a href="#" class="text-decoration-none"><i class="fab fa-linkedin-in fa-2x"></i></a></span>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-4 text-center">
+                    <div class="d-flex justify-content-center">
+                        <img src="./assets/logo.png" class="img-fluid my-5" style="max-width: 45px; max-height: 45px;">
+                        <h1 class="font-audiowide my-5">CDEC</h1>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-4 text-center py-4">
+                    <h3 class="font-roboto">Powered By</h3>
+                    <div class="d-flex justify-content-center">
+                        <a href="https://www.charusat.ac.in/" target="_blank"><img src="./assets/charusat.jpg" class="img-fluid d-block mx-auto" style="max-width: 250px;"></a>
+                        &nbsp;&nbsp;
+                        <a href="http://www.csi-india.org/" target="_blank"><img src="./assets/csilogo.jpg" class="img-fluid d-block mx-auto" style="max-width: 65px;"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row copyright">
+                <div class="col-12 text-center">
+                    <h6 class="font-baloo py-3">Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | <span class="font-audiowide">&nbsp;<img src="./assets/logo.png" class="img-fluid">CDEC</span></h6>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--!Footer-->
+
+    <!--JS-->
+    <script src="./jquery-3.3.1.min.js"></script>
+    <script src="./jquery-migrate-3.0.1.min.js"></script>
+
+    <!--Bootstrap JS CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <!--Jquery Countdown JS-->
+    <script src="./plugins/responsive-flip-countdown/jquery.flipper-responsive.js"></script>
+
+    <!--Stellar JS-->
+    <script src="./plugins/stellar/jquery.stellar.min.js"></script>
+
+    <!--tilt.js-->
+    <script type="text/javascript" src="./plugins/tilt.js/vanilla-tilt.js"></script>
+
+    <!--Swiper Carousel-->
+    <script src="./plugins/swiper/swiper.min.js"></script>
+
+    <!--AOS-->
+    <script src="./plugins/aos/aos.js"></script>
+
+    <!--Datatable JS-->
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+
+    <!--Bottom to Top-->
+    <script src="./plugins/Scroll-To-Top-Button/dist/jquery-backToTop.min.js"></script>
+
+    <!--Sweetalert-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!--Floating Btn-->
+    <script src="./plugins/FloatingBtn/docked-link.js"></script>
+
+    <!--Custom JS-->
+    <script src="./main.js"></script>
+</body>
+</html>

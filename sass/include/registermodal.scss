@@ -1,0 +1,67 @@
+/*--Register Form--*/
+.registerModal
+{
+    .modal-content
+    {
+        .row
+        {
+            form
+            {
+                input, select
+                {
+                    transition: all 0.5s;
+
+                    &:focus
+                    {
+                        box-shadow: 0px 0px 10px rgba(0, 125, 255, 0.5);
+                    }
+                }
+            }
+        }
+    }
+
+    .upload-profile-img
+    {
+        position: relative;
+        width: 10%;
+        height: 10%;
+        margin-left: auto;
+        margin-right: auto;
+        transition: filter .8s ease;
+
+        &:hover
+        {
+            filter: drop-shadow(1px 1px 22px #7584bb);
+
+            .camera-icon
+            {
+                filter: invert(100%) !important;
+            }
+        }
+
+        #upload-profile
+        {
+            position: absolute;
+            top: 0;
+            z-index: 10;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-top: 0px;
+            opacity: 0;
+
+            &::-webkit-file-upload-button
+            {
+                visibility: hidden;
+            }
+        }
+
+        .camera-icon
+        {
+            position: absolute;
+            top: 70px;
+            width: 60px !important;
+            filter: invert(30%) !important;
+        }
+    }
+}

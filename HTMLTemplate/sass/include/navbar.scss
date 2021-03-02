@@ -1,0 +1,99 @@
+/*--Navbar--*/
+nav
+{
+    background: transparent;
+    border-bottom: 2px solid $color-blue;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+
+    a
+    {
+        color: #fff;
+    }
+    
+    ul
+    {
+        li
+        {
+            a
+            {
+                font-size: 18px;
+            }
+            .menu
+            {
+                position: relative;
+                &:after
+                {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    transform: translateX(-50%) scaleX(0);
+                    -webkit-transform: translateX(-50%) scaleX(0);
+                    transform-origin: 50% 50%;
+                    -webkit-transform-origin: 50% 50%;
+                    width: 100%;
+                    height: 2px;
+                    background-color: $color-blue;
+                    transition: 250ms;
+                    -webkit-transition: 250ms;
+                }
+
+                &:hover
+                {
+                    color: $color-blue;
+                    transition: .9s;
+                    &:after
+                    {
+                        transform: translateX(-50%) scaleX(1);
+                    }
+                }
+            }
+        }
+    }
+
+    .navbar-toggler
+    {
+        i
+        {
+            color: #fff;
+        }
+    }
+}
+
+.navbar_fixed
+{
+    background: #fff;
+    transition: background .5s ease-in-out;
+    box-shadow: 0px 10px 30px rgba(6, 6, 7, 1);
+}
+.nav_black
+{
+    color: #000000;
+}
+
+.activemenu
+{
+    position: relative;
+    color: $color-blue;
+
+    &:after
+    {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%) scaleX(1);
+        -webkit-transform: translateX(-50%) scaleX(1);
+        transform-origin: 50% 50%;
+        -webkit-transform-origin: 50% 50%;
+        width: 100%;
+        height: 2px;
+        background-color: $color-blue;
+    }
+
+    &:hover
+    {
+        color: $color-blue;
+    }
+}
