@@ -7,7 +7,15 @@ Website for collage technical event
   - Database: MySQL
   - Encryption: CryptoJS & Open SSL Libraries
  
- Created fully dynamic website for 36 hours online event of college.
+Developed in 2020, CDEC is an acronym of Charusat Decryptonite which is an Informational Technology-based decrypt hunt for all
+the CHARUSAT students despite from Tech or Non-Tech Branches where an individual competed with each other to challenge their own
+potential.
+
+It is a 36-hours decrypt hunt. Consisting of 100 levels in the form of riddles. Answer to which is in the form of the fill in the blank.
+
+The event hosted on the 12-13th September 2020 (Sat 9am to Sun 9pm).
+
+
 
 ### Screenshots given here:
 
